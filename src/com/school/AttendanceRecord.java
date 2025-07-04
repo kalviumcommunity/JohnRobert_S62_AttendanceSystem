@@ -1,3 +1,5 @@
+package com.school;
+
 public class AttendanceRecord {
     private
     int studentId;
