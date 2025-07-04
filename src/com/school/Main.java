@@ -4,27 +4,28 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("--- School Attendance System ---");
 
-        Student[] students = new Student[2];
-        students[0] = new Student();
-        students[0].setDetails(1, "Alice Wonderland");
-        students[1] = new Student();
-        students[1].setDetails(2, "Bob The Builder");
+        Student student1 = new Student("Alice Johnson");
+        Student student2 = new Student("Bob Smith");
+        Student student3 = new Student("Charlie Brown");
 
-        Course[] courses = new Course[2];
-        courses[0] = new Course();
-        courses[0].setDetails("CS101", "Intro to Programming");
-        courses[1] = new Course();
-        courses[1].setDetails("MA202", "Linear Algebra");
+        Course course1 = new Course("Intro To Programming");
+        Course course2 = new Course("Linear Programming");
 
         System.out.println("\nRegistered Students:");
-        for (Student student : students) {
-            if (student != null) student.displayDetails();
-        }
+        student1.displayDetails();
+        student2.displayDetails();
+        student3.displayDetails();
 
         System.out.println("\nAvailable Courses:");
-        for (Course course : courses) {
-            if (course != null) course.displayDetails();
-        }
+        course1.displayDetails();
+        course2.displayDetails();
         System.out.println("\nSession 2: Core Domain Modelling Complete.");
+
+        System.out.println("New Student is added to the system.");
+        Student student4 = new Student("New Student");
+        Course course3 = new Course("New Course");
+        student4.displayDetails();
+        course3.displayDetails();
+
     }
 }

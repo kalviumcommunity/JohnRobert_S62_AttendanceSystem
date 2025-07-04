@@ -2,12 +2,13 @@
 package com.school;
 
 public class Course {
+    private static int nextCourseIdCounter = 101;
     String courseId; // e.g., "CS101"
     String courseName;
 
-    public void setDetails(String id, String cName) {
-        this.courseId = id;
-        this.courseName = cName;
+    public Course(String courseName) {
+        this.courseId = "CS" + nextCourseIdCounter++;
+        this.courseName = courseName;
     }
 
     public void displayDetails() {
